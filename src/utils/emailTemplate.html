@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publicação de Precatório</title>
+</head>
+
+<body style="
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    ">
+  <div style="
+        background-color: white;
+        border-radius: 4px;
+        margin: 0 auto;
+        max-width: 800px;
+        border: 1px solid #dddddd;
+      ">
+    <div style="border-bottom: 1px solid #dddd;">
+      <div style="border-bottom: 1px solid #dddddd; padding: 10px;">
+        <div style="position: relative;">
+          <h2 style="
+                margin: 0px;
+                color: #181c32;
+                font-size: 1.2rem;
+                display: inline;
+              ">
+            {precatorioPublicacao}
+          </h2>
+          <span style="
+                font-size: 1.33rem;
+                float: right;
+                margin-bottom: 20px;
+              ">
+            <a href='https://www3.tjrj.jus.br/consultadje/pdf.aspx?dtPub={data}&caderno=A&pagina=-1' style="
+                  border-radius: 5px;
+                  text-decoration: none;
+                  text-align: center;
+                  background-color: #f5f8fa;
+                  margin-right: 10px;
+                  display: inline-block;
+                  width: 30px;
+                  height: 30px;
+                  padding: 2px;
+                ">
+              <img src="https://sv.precsys.app.br/public/ImgMail/file-alt2.png" alt="diário" style="width: 20px;" />
+            </a>
+            <a href="https://v2.precsys.app.br/" style="
+                  border-radius: 5px;
+                  text-decoration: none;
+                  text-align: center;
+                  background-color: #f5f8fa;
+                  padding: 0.2rem 0.4rem;
+                ">
+              <img src="https://sv.precsys.app.br/public/ImgMail/external-link-alt-solid.png" alt="Perfil"
+                style="width: 20px;" />
+            </a>
+          </span>
+          <div>
+            <span style="
+                  margin-top: 0.1rem;
+                  display: inline-block;
+                  font-size: 0.8rem;
+                  padding-bottom: 0.3rem;
+                  color: #a3a3a3;
+                  font-weight: 500;
+                ">
+              {cedente}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 10px;">
+        <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: {corStatus};
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {status}
+        </span>
+        <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: #e1e3ea;
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {falecido}
+        </span>
+        <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: #e1e3ea;
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {anuencia_advogado}
+        </span>
+        <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: #e1e3ea;
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {ente} - {ano}
+        </span>
+        <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: #e1e3ea;
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {natureza}
+        </span>
+        <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: #e1e3ea;
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {data_cessao}
+        </span>
+                <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: #e1e3ea;
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {empresa}
+        </span>
+        <span style="
+              margin-top: 0.2rem;
+              display: inline-block;
+              font-size: 0.5rem;
+              padding: 0.3rem;
+              background-color: #e1e3ea;
+              border-radius: 0.2rem;
+              font-weight: bold;
+              margin-right: 0.1rem;
+            ">
+          {escrevente}
+        </span>
+      </div>
+    </div>
+    <div style="padding: 5px 10px;">
+      <div style="display: flex; width: 100%;">
+        <div>
+          <table style="font-weight: 500; font-size: 0.7rem; margin: 0;">
+            <tbody style="display: flex; width: 100%;">
+              <tr>
+                <td style="
+                      padding: 0.2rem 0.2rem 0rem 0.2rem;
+                      color: #3f4254;
+                    ">
+                  {advogadosPublicacao}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0rem 1rem;">
+      <p style="
+            padding: 0rem 0.2rem;
+            color: #b5b5c3;
+            font-size: 0.8rem;
+          ">
+        {textoPublicacao}
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
