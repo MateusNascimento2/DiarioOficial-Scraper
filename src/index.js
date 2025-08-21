@@ -8,12 +8,12 @@ const { baixarPDF } = require('./controllers/baixarController');
 const { buscarCessoes, adicionarPublicacoes } = require('./database/cessaoRepository');
 const { enviarEmailPublicacoes, enviarEmail0Publicacoes } = require('./services/emailService');
 
-function getProximaDataUtil(simuladoHoje = '01/08/2025') {
-  // const hoje = dayjs(simuladoHoje, 'DD/MM/YYYY');
-  const hoje = dayjs();
+function getProximaDataUtil(simuladoHoje = '21/08/2025') {
+  const hoje = dayjs(simuladoHoje, 'DD/MM/YYYY');
+  // const hoje = dayjs();
   // console.log(hoje);
-  let proxima = hoje.add(1, 'day');
-  // let proxima = hoje.add(0, 'day');
+  // let proxima = hoje.add(1, 'day');
+  let proxima = hoje.add(0, 'day');
 
   // Se cair sábado (6), pula dois dias para segunda
   if (proxima.day() === 6) {
@@ -39,14 +39,14 @@ function getProximaDataUtil(simuladoHoje = '01/08/2025') {
     const publicacoesDiario = await processarPDF(filePath);
 
     // 3. Adiciona todas as publicações em um DB
-    for (const publicacao of publicacoesDiario) {
+    /*     for (const publicacao of publicacoesDiario) {
       await adicionarPublicacoes(
         publicacao.numero,
         publicacao.partes,
         publicacao.texto,
         data,
       );
-    }
+    } */
 
     const cessoes = await buscarCessoes();
 

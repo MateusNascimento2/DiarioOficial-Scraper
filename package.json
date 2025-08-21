@@ -14,7 +14,8 @@
     "dotenv": "^17.2.0",
     "mysql2": "^3.14.1",
     "nodemailer": "^7.0.3",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "puppeteer": "^24.17.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
